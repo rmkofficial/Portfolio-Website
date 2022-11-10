@@ -1,4 +1,4 @@
-@import "_config.scss";
+@import "config.scss";
 @import "utilities.scss";
 
 // General Styles
@@ -42,10 +42,7 @@ img {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    
   }
-
-  
 
   li {
     padding: 2rem 3rem;
@@ -59,7 +56,6 @@ img {
     padding-bottom: 0.5rem;
     transition: border-color 0.5s;
     position: absolute;
-    
 
     &:hover {
       font-size: 25px;
@@ -89,15 +85,16 @@ img {
         font-size: 4rem;
         line-height: 1.2;
 
-        span{
+        span {
           color: $main-color;
         }
       }
     }
   }
-
-  //Header Inner
   &-inner {
+    background: $bg-image no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
   }
 }
 
@@ -134,7 +131,7 @@ img {
           font-weight: bold;
         }
       }
-      
+
       div {
         padding: 3rem 0;
 
@@ -155,7 +152,7 @@ img {
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 1.5rem;
       text-align: center;
-      
+
       &-step {
         position: absolute;
         top: 0;
@@ -163,7 +160,7 @@ img {
         font-size: 28px;
         background: $main-color;
         color: set-text-color($main-color);
-        border-radius: 50% ;
+        border-radius: 50%;
         height: 15px;
         width: 15px;
         line-height: 15px;
@@ -195,6 +192,51 @@ img {
           }
         }
       }
+    }
+  }
+}
+
+//About Sections
+#about {
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        "bioimage  bio bio"
+        "aw1 aw2 aw3";
+      grid-gap: 1.2rem;
+    }
+
+    //Grid Area
+    .bio-image {
+      grid-area: bioimage;
+    }
+
+    .bio {
+      grid-area: bio;
+      border-left: 3px solid $main-color;
+      padding: 0.8rem;
+
+      p {
+        margin-top: 2rem;
+      }
+    }
+
+    .award-1 {
+      grid-area: aw1;
+    }
+    .award-2 {
+      grid-area: aw2;
+    }
+    .award-3 {
+      grid-area: aw3;
+    }
+
+    .award-1 .fas,
+    .award-2 .fas,
+    .award-3 .fas {
+      color: $main-color;
+      margin: 1rem;
     }
   }
 }

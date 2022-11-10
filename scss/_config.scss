@@ -7,10 +7,10 @@ $dark-color: #333;
 $bg-image: url('/dist/img/showcase.jpg');
 
 //Set Text Color
-@function set-text-color($color) {
-    @if(ligthness($color)) > 50 {
-        @return #000;
-    } @else {
-        @return #fff;
-    }
-}
+// @function set-text-color($color) {
+//     @if(ligthness($color)) > 50 {
+//         @return #000;
+//     } @else {
+//         @return #fff;
+//     }
+// }
